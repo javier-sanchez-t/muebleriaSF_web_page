@@ -83,6 +83,11 @@
       margin-top: 10%;
     }
 
+    .imgLeftColumn{
+      width: 40%; 
+      margin-top: 10%;
+    }
+
     .center{
       text-align: center;
     }

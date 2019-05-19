@@ -3,6 +3,7 @@
       --page-bg-color: white;
       --guinda-bg-color: rgb(51,0,0);
       --img-comedores: url("../img/comedores/03_01.png");
+      --img-recamaras: url("../img/recamaras/01.png");
     }
 
     @font-face {
@@ -41,6 +42,17 @@
       font-size: 45px;
     }
 
+    #recamarasContainer{
+      margin-top: 20px;
+      padding-top: 2%;
+      height: 100px;
+      text-align: left;
+      background-image: var(--img-recamaras);
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      font-size: 45px;
+    }
+
     #coleccionRight{
       margin-top: 20px;
       padding-top: 8px;
@@ -73,4 +85,9 @@
 
     .center{
       text-align: center;
+    }
+
+    .footer{
+      background-image: linear-gradient(to right, var(--guinda-bg-color) , white);
+      color: white;
     }

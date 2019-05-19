@@ -1,0 +1,76 @@
+    :root {
+      --main-bg-opacity: 0.8;
+      --page-bg-color: white;
+      --guinda-bg-color: rgb(51,0,0);
+      --img-comedores: url("../img/comedores/03_01.png");
+    }
+
+    @font-face {
+      font-family: 'HelveticaText';
+      src: url('../css/fonts/Helvetica_LT_Std_Condensed.woff') format('woff');
+    }
+
+    @font-face {
+      font-family: 'HelveticaTitles';
+      src: url('../css/fonts/Helvetica_LT_Std_Bold_Condensed.woff') format('woff');
+    }
+
+    body{ 
+      font-family: 'HelveticaText'; 
+      background-color: var(--page-bg-color);
+      color: var(--guinda-bg-color);
+    }
+
+    .divider{
+      height: 35px;
+      background-image: linear-gradient(to right, var(--guinda-bg-color) , white);
+    }
+
+    .title{
+      font-size: 45px;
+    }
+
+    #comedoresContainer{
+      margin-top: 20px;
+      padding-top: 2%;
+      height: 100px;
+      text-align: right;
+      background-image: var(--img-comedores);
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      font-size: 45px;
+    }
+
+    #coleccionRight{
+      margin-top: 20px;
+      padding-top: 8px;
+      background-color: var(--guinda-bg-color);
+      color: white;
+      font-size: 25px;
+      text-align: center;
+    }
+
+    .line{
+      display: block;
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+      margin-left: auto;
+      margin-right: auto;
+      border-style: inset;
+      border-width: 2px;
+      border-color: white;
+      margin-top: 0px;
+    }
+
+    #comedoresContainerBody{
+      padding: 0px;
+    }
+
+    .imgRightColumn{
+      width: 55%; 
+      margin-top: 10%;
+    }
+
+    .center{
+      text-align: center;
+    }

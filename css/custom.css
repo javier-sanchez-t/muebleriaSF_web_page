@@ -2,6 +2,7 @@
       --main-bg-opacity: 0.8;
       --page-bg-color: white;
       --guinda-bg-color: rgb(51,0,0);
+      --grey-bg-color: rgb(194,194,194);
       --img-comedores: url("../img/comedores/03_01.png");
       --img-recamaras: url("../img/recamaras/01.png");
     }
@@ -95,4 +96,12 @@
     .footer{
       background-image: linear-gradient(to right, var(--guinda-bg-color) , white);
       color: white;
+    }
+
+    .greyBackgroundLeft{
+      background-image: linear-gradient(to right, var(--grey-bg-color) , white);
+    }
+
+    .greyBackgroundRight{
+      
     }

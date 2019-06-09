@@ -8,17 +8,17 @@
     }
 
     @font-face {
-      font-family: 'HelveticaText';
-      src: url('../css/fonts/Helvetica_LT_Std_Condensed.woff') format('woff');
+      font-family: 'GADUGI';
+      src: url('../fonts/Gadugi.woff') format('woff');
     }
 
     @font-face {
-      font-family: 'HelveticaTitles';
-      src: url('../css/fonts/Helvetica_LT_Std_Bold_Condensed.woff') format('woff');
+      font-family: 'MONBAITI';
+      src: url('../fonts/monbaiti.woff') format('woff');
     }
 
     body{ 
-      font-family: 'HelveticaText'; 
+      font-family: 'GADUGI'; 
       background-color: var(--page-bg-color);
       color: var(--guinda-bg-color);
     }
@@ -33,7 +33,7 @@
     }
 
     #comedoresContainer{
-      margin-top: 20px;
+      font-family: 'MONBAITI';
       padding-top: 2%;
       height: 100px;
       text-align: right;
@@ -44,7 +44,7 @@
     }
 
     #recamarasContainer{
-      margin-top: 20px;
+      font-family: 'MONBAITI';
       padding-top: 2%;
       height: 100px;
       text-align: left;
@@ -55,7 +55,7 @@
     }
 
     #coleccionRight{
-      margin-top: 20px;
+      font-family: 'MONBAITI';
       padding-top: 8px;
       background-color: var(--guinda-bg-color);
       color: white;

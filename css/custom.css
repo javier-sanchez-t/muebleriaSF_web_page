@@ -3,8 +3,12 @@
       --page-bg-color: white;
       --guinda-bg-color: rgb(51,0,0);
       --grey-bg-color: rgb(194,194,194);
+      --grey-tiendas-bg-color: rgb(51,51,51);
+      --img-quienes-somos: url("../img/quienes_somos/fondo.png");
       --img-comedores: url("../img/comedores/03_01.png");
       --img-recamaras: url("../img/recamaras/01.png");
+      --img-back-tienda: url("../img/tiendas/fondo_tienda.png");
+      --img-back-tiendas: url("../img/tiendas/fondo.png");
     }
 
     @font-face {
@@ -25,6 +29,14 @@
 
     .divider{
       height: 35px;
+      background-image: linear-gradient(to right, var(--guinda-bg-color) , white);
+    }
+
+    .fondoQuienesSomos{
+      background-image: var(--img-quienes-somos);
+    }
+
+    .degradadoVino{
       background-image: linear-gradient(to right, var(--guinda-bg-color) , white);
     }
 
@@ -85,7 +97,7 @@
     }
 
     .imgLeftColumn{
-      width: 40%; 
+      width: 70%; 
       margin-top: 10%;
     }
 
@@ -103,5 +115,56 @@
     }
 
     .greyBackgroundRight{
-      
+      background-image: linear-gradient(to left, var(--grey-bg-color) , white);
+    }
+
+    /*
+    @media only screen and (max-width: 750px) {
+      [class="tienda"] {
+        height: 320px;
+        font-size:70%;
+      }
+    }
+
+    @media only screen and (min-width: 751px) {
+      [class="tienda"] {
+        height: 460px;
+        font-size:120%;
+      }
+    }*/
+
+    .titleTiendas{
+      margin-top:30px;
+      background-color: var(--grey-tiendas-bg-color);
+      color: white;
+      font-family: 'MONBAITI';
+    }
+
+    .imgTitleTienda{
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    .tiendaContainerGlobal{
+      background-image: var(--img-back-tiendas);
+      background-size: cover;
+      background-repeat:no-repeat;
+    }
+
+    .tiendaContainer{
+      padding: 3%;
+    }
+
+    .tienda{
+      background-image: var(--img-back-tienda);
+      background-size: 100% 100%;
+      /*background-size: contain;*/
+      background-repeat:no-repeat;
+
+      padding: 20%;
+    }
+
+    .icon{
+      margin-top: 5px;
+      margin-right: 5px;
     }

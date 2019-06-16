@@ -14,6 +14,7 @@
     <script src="js/jquery-3.3.1.slim.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/index.js"></script>
 
     <title>Mueblería San Francisco</title>
 </head>
@@ -50,10 +51,10 @@
                 </li>
             </ul>
 
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Búsqueda" aria-label="Search">
-                <button class="btn btn-light my-2 my-sm-0" type="submit">Buscar</button>
-            </form>
+            <div class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Búsqueda" aria-label="Search" id="txtBusqueda">
+                <button class="btn btn-light my-2 my-sm-0" onclick="buscarEnCatalogo()">Buscar</button>
+            </div>
         </div>
     </nav>
 

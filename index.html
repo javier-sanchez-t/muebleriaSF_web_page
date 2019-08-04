@@ -9,20 +9,15 @@
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="./css/custom.css" />
-
-    <!-- JS -->
-    <script src="js/jquery-3.3.1.slim.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/index.js"></script>
-
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    
     <title>Mueblería San Francisco</title>
 </head>
 
 <body>
 
     <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="INICIO">
+    <nav class="navbar navbar-expand-lg navbar-dark">
         <a class="navbar-brand" href="#">
             <img src="img/header/logo.png" height="70px;" width="300px;">
         </a>
@@ -32,34 +27,48 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="mr-auto"></ul>
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#INICIO">Inicio<span class="sr-only">(current)</span></a>
+           
+            <ul class="navbar-nav mr-auto" style="width: 100%;">
+                <li class="nav-item" id="INICIO_LINK">
+                    <a class="nav-link" style="color: white;">
+                        <i class="icon-home"></i>
+                        Inicio
+                        <span class="sr-only">(current)</span>
+                    </a>
                 </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="#SOBRE_NOSOTROS">Sobre nosotros</a>
+                <li class="nav-item" id="SOBRE_NOSOTROS_LINK">
+                    <a class="nav-link" style="color: white;">
+                        <i class="icon-group"></i>
+                        Sobre nosotros
+                    </a>
                 </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="#ESTILOS">Estilos</a>
+                <li class="nav-item" id="ESTILOS_LINK">
+                    <a class="nav-link" style="color: white;">
+                        <i class="icon-th"></i>
+                        Estilos
+                    </a>
                 </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="#TIENDAS">Tiendas</a>
+                <li class="nav-item" id="TIENDAS_LINK">
+                    <a class="nav-link" style="color: white;">
+                        <i class="icon-briefcase"></i>
+                        Tiendas
+                    </a>
                 </li>
             </ul>
 
             <div class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Búsqueda" aria-label="Search" id="txtBusqueda">
-                <button class="btn btn-light my-2 my-sm-0" onclick="buscarEnCatalogo()">Buscar</button>
+                <input class="form-control mr-sm-2" type="search" placeholder="Búsqueda" aria-label="Search"
+                    id="txtBusqueda">
+                <button class="btn btn-secondary my-2 my-sm-0 btnBuscar" onclick="buscarEnCatalogo()">Buscar</button>
             </div>
         </div>
     </nav>
 
     <!-- VIDEO  -->
-    <div class="degradadoVino" style="width: 100%;">
+    <div class="degradadoVino" style="width: 100%;" id="INICIO">
         <video autoplay muted loop playsinline id="myVideo" style="width: 100%;">
             <source src="video/video.mp4" type="video/mp4">
         </video>
@@ -79,7 +88,7 @@
                 <div class="title">
                     ¿Quiénes somos?
                 </div>
-                <div>
+                <div class="aboutUsBody">
                     <p>
                         <img src="img/quienes_somos/silla.jpg" width="200px" height="auto%" align="right">
                         Somos una empresa 100% mexicana poblana, fundada desde 1999 en la población de San francisco
@@ -108,8 +117,12 @@
         </div>
     </div>
 
+    <!-- DIVIDER -->
+    <div class="divider">
+    </div>
+
     <!-- COMEDORES -->
-    <div class="container" style="margin-bottom: 30px;" id="ESTILOS">
+    <div class="container-fluid" id="ESTILOS">
         <div class="row greyBackgroundLeft" style="padding: 2%;">
             <div class="col-6">
                 <img src="img/header/logo2.png" width="60%" height="auto" style="margin-top: 8%;">
@@ -133,13 +146,13 @@
                 <img src="img/comedores/06.png" style="width: 100%; height: 100%;">
             </div>
             <div class="col-4">
-                <div class="center">
+                <div class="product center" onclick="location.href='catalogo.php?buscar=BUFFET';">
                     <img src="img/comedores/04.png" class="imgRightColumn">
                     <div>
                         Bufetera
                     </div>
                 </div>
-                <div class="center">
+                <div class="product center" onclick="location.href='catalogo.php?buscar=CHIMENEA';">
                     <img src="img/comedores/05.png" class="imgRightColumn">
                     <div>
                         Chimeneas
@@ -149,8 +162,12 @@
         </div>
     </div>
 
+    <!-- DIVIDER -->
+    <div class="divider">
+    </div>
+
     <!-- RECAMARAS -->
-    <div class="container">
+    <div class="container-fluid">
         <div class="row greyBackgroundRight" style="padding: 2%;">
             <div class="col-6">
                 <img src="img/recamaras/logo2.png" width="80%" height="auto">
@@ -171,13 +188,13 @@
             </div>
 
             <div class="col-4">
-                <div class="center">
+                <div class="product center" onclick="location.href='catalogo.php?buscar=SALA';">
                     <img src="img/recamaras/09.png" class="imgLeftColumn">
                     <div>
                         Sala Rústica
                     </div>
                 </div>
-                <div class="center">
+                <div class="product center" onclick="location.href='catalogo.php?buscar=VITRINA';">
                     <img src="img/recamaras/11.png" class="imgLeftColumn">
                     <div>
                         Vitrinas
@@ -191,8 +208,11 @@
         </div>
     </div>
 
-    <!-- TIENDAS -->
+    <!-- DIVIDER -->
+    <div class="divider">
+    </div>
 
+    <!-- TIENDAS -->
     <div class="titleTiendas">
         <div class="container">
             <div class="row" id="TIENDAS">
@@ -214,7 +234,43 @@
                     <div class="tienda">
                         <img src="img/tiendas/rustico.png" class="imgTitleTienda">
 
-                        <img src="img/icons/ubicacion.png" width="18px" height="auto%" align="left" class="icon">
+                        <a
+                            href="https://www.google.com/maps/search/Calle+Florencio+Espinoza+Oriente%23305+local+2+colonia+centro+San+Martin+Texmelucan,/@19.2834391,-98.4318266,17z/data=!3m1!4b1">
+                            <img src="img/icons/ubicacion.png" width="18px" height="auto%" align="left" class="icon">
+                        </a>
+                        <p>
+                            Direccion:
+                            Calle Florencio Espinoza Oriente #305 local 2 colonia centro San Martin Texmelucan, Puebla
+                        </p>
+                        <img src="img/icons/telefono.png" width="22px" height="auto%" align="left" class="icon">
+                        <p>
+                            Telefonos: 248 462 2165
+                        </p>
+                        <img src="img/icons/mail.png" width="22px" height="auto%" align="left" class="icon">
+                        <p>
+                            Mail: josefarusticos@gmail.com
+                        </p>
+
+                        <div style="margin-bottom: 10px;">
+                            Redes sociales:
+                        </div>
+                        <div>
+                            <a href="https://www.facebook.com/rusticos.sanfrancisco/">
+                                <img src="img/tiendas/facebook.png" style="width: 30px;">
+                            </a>
+                        </div>
+                        <br />
+
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 tiendaContainer">
+                    <div class="tienda">
+                        <img src="img/tiendas/rachel.png" class="imgTitleTienda" style="height: 90px;">
+
+                        <a
+                            href="https://www.google.com/maps/place/Florencio+Espinosa+Oriente+306,+Col+Domingo+Arenas,+74050+San+Mart%C3%ADn+Texmelucan+de+Labastida,+Pue./@19.2832563,-98.4318896,21z/data=!4m5!3m4!1s0x85cfd4799ef20b6d:0x3ef391e5573d2eac!8m2!3d19.2833035!4d-98.4319178">
+                            <img src="img/icons/ubicacion.png" width="18px" height="auto%" align="left" class="icon">
+                        </a>
                         <p>
                             Direccion:
                             Calle Florencio Espinoza Oriente #306 colonia centro San Martin Texmelucan, Puebla
@@ -227,26 +283,16 @@
                         <p>
                             Mail: rashelchocolate@gmail.com
                         </p>
-                        Redes sociales:
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-6 tiendaContainer">
-                    <div class="tienda">
-                        <img src="img/tiendas/rachel.png" class="imgTitleTienda" style="height: 90px;">
 
-                        <img src="img/icons/ubicacion.png" width="18px" height="auto%" align="left" class="icon">
-                        Direccion:
-                        Calle Florencio Espinoza Oriente#305 local 2 colonia centro San Martin Texmelucan, Puebla
-                        </p>
-                        <img src="img/icons/telefono.png" width="22px" height="auto%" align="left" class="icon">
-                        <p>
-                            Telefonos: 248 462 2165
-                        </p>
-                        <img src="img/icons/mail.png" width="22px" height="auto%" align="left" class="icon">
-                        <p>
-                            Mail: josefarusticos@gmail.com
-                        </p>
-                        Redes sociales:
+                        <div style="margin-bottom: 10px;">
+                            Redes sociales:
+                        </div>
+                        <div>
+                            <a href="https://www.facebook.com/profile.php?id=100010202595034&ref=bookmarks">
+                                <img src="img/tiendas/facebook.png" style="width: 30px;">
+                            </a>
+                        </div>
+
                     </div>
                 </div>
 
@@ -255,28 +301,13 @@
                     <div class="tienda">
                         <img src="img/tiendas/rustico.png" class="imgTitleTienda">
 
-                        <img src="img/icons/ubicacion.png" width="18px" height="auto%" align="left" class="icon">
-                        Direccion:
-                        Xicoténcatl No. 11 San Martin Texmelucan, Puebla
-                        </p>
-                        <img src="img/icons/telefono.png" width="22px" height="auto%" align="left" class="icon">
+                        <a
+                            href="https://www.google.com/maps/place/Calle+Ju%C3%A1rez+19,+Francisco+Villa,+90280+Cd+de+Nanacamilpa,+Tlax./@19.4916642,-98.5380574,17z/data=!3m1!4b1!4m5!3m4!1s0x85d1d3a38479f055:0xe246deeb52142595!8m2!3d19.4916642!4d-98.5358687">
+                            <img src="img/icons/ubicacion.png" width="18px" height="auto%" align="left" class="icon">
+                        </a>
                         <p>
-                            Telefonos:248 484 5934
-                        </p>
-                        <img src="img/icons/mail.png" width="22px" height="auto%" align="left" class="icon">
-                        <p>
-                            Mail: muebles.teoyoccan@gmail.com
-                        </p>
-                        Redes sociales:
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-6 tiendaContainer">
-                    <div class="tienda">
-                        <img src="img/tiendas/teoyaccan.png" class="imgTitleTienda" style="height: 80px;">
-
-                        <img src="img/icons/ubicacion.png" width="18px" height="auto%" align="left" class="icon">
-                        Direccion:
-                        Calle Juárez #19 Nanacamilpa, Tlaxcala
+                            Direccion:
+                            Calle Juárez #19 Nanacamilpa, Tlaxcala
                         </p>
                         <img src="img/icons/telefono.png" width="22px" height="auto%" align="left" class="icon">
                         <p>
@@ -286,7 +317,53 @@
                         <p>
                             Mail: rusticosuc@gmail.com
                         </p>
-                        Redes sociales:
+
+                        <div style="margin-bottom: 10px;">
+                            Redes sociales:
+                        </div>
+                        <div>
+                            <a href="https://www.facebook.com/rusticos.sanfrancisco/">
+                                <img src="img/tiendas/facebook.png" style="width: 30px;">
+                            </a>
+                        </div>
+                        <br />
+
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 tiendaContainer">
+                    <div class="tienda">
+                        <div>
+                            <img src="img/tiendas/teoyaccan.png" class="imgTitleTienda"
+                                style="height: 80px; width: 80%">
+                        </div>
+
+                        <a
+                            href="https://www.google.com/maps?q=Xicot%C3%A9ncatl+No.+11+San+Martin+Texmelucan,+Puebla&rlz=1C1CHZL_esMX760MX760&um=1&ie=UTF-8&sa=X&ved=0ahUKEwiB5PiR-PHiAhUQWa0KHUvVAScQ_AUIECgB">
+                            <img src="img/icons/ubicacion.png" width="18px" height="auto%" align="left" class="icon">
+                        </a>
+                        <p>
+                            Direccion:
+                            Xicoténcatl No. 11 San Martin Texmelucan, Puebla
+                        </p>
+                        <img src="img/icons/telefono.png" width="22px" height="auto%" align="left" class="icon">
+                        <p>
+                            Telefonos:248 484 5934
+                        </p>
+                        <img src="img/icons/mail.png" width="22px" height="auto%" align="left" class="icon">
+                        <p>
+                            Mail: muebles.teoyoccan@gmail.com
+                        </p>
+
+                        <div style="margin-bottom: 10px;">
+                            Redes sociales:
+                        </div>
+                        <div>
+                            <a
+                                href="https://www.facebook.com/Muebles-y-Decoraciones-Teoyoccan-2755091791174111/?modal=admin_todo_tour">
+                                <img src="img/tiendas/facebook.png" style="width: 30px;">
+                            </a>
+                        </div>
+
                     </div>
                 </div>
 
@@ -330,9 +407,18 @@
                         Ubicación
                     </h5>
 
-                    <ul class="list-unstyled">
+                    <ul style="text-align: left;">
                         <li>
-                            Avenida
+                            Calle Florencio Espinoza Oriente #305 local 2 colonia centro San Martin Texmelucan, Puebla
+                        </li>
+                        <li>
+                            Calle Florencio Espinoza Oriente #306 colonia centro San Martin Texmelucan, Puebla
+                        </li>
+                        <li>
+                            Calle Juárez #19 Nanacamilpa, Tlaxcala
+                        </li>
+                        <li>
+                            Xicoténcatl No. 11 San Martin Texmelucan, Puebla
                         </li>
                     </ul>
 
@@ -348,13 +434,23 @@
         <!-- Footer Links -->
 
         <!-- Copyright -->
-        <div class="text-center py-3">© 2018 Copyright:
+        <div class="text-center py-3">© 2019 Copyright:
             <a> Mueblería San Francisco</a>
         </div>
         <!-- Copyright -->
 
     </footer>
     <!-- Footer -->
+
+    <!-- SCROLL TOP-->
+    <a href="javascript:" id="return-to-top" style="display: block;"><i class="icon-chevron-up"></i></a>
+    
 </body>
+
+<!-- JS -->
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/custom.js"></script>
 
 </html>

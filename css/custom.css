@@ -134,7 +134,6 @@
     }*/
 
     .titleTiendas{
-      margin-top:30px;
       background-color: var(--grey-tiendas-bg-color);
       color: white;
       font-family: 'MONBAITI';
@@ -146,9 +145,11 @@
     }
 
     .tiendaContainerGlobal{
-      background-image: var(--img-back-tiendas);
+      /*background-image: var(--img-back-tiendas);*/
+      background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), var(--img-back-tiendas);
       background-size: cover;
       background-repeat:no-repeat;
+      
     }
 
     .tiendaContainer{
@@ -160,7 +161,6 @@
       background-size: 100% 100%;
       /*background-size: contain;*/
       background-repeat:no-repeat;
-
       padding: 20%;
     }
 
@@ -169,24 +169,162 @@
       margin-right: 5px;
     }
 
-    .catalog{
-      height:80vh;
-      margin-left: 1px;
-    }
-
-    .catalog-menu{
+    .leftPanelSearch{
+      /*float: left; 
+      width: 30%; 
+      height: 75vh;
+      overflow-y: scroll;*/
+      margin-left: 1px; 
       background-color: var(--guinda-bg-color);
-      height: 100%;
-      padding: 0px;
-      color: white
     }
 
-    .catalog-menu-item{
-      height: 50px;
-      padding: 10px;
+    .menu-item{
+      color: white;
+      font-size: 13px;
+      padding: 8px;
+      cursor: pointer;
     }
-    
-    .catalog-menu-item:hover{
+
+    .menu-item:hover{
+      color: var(--grey-tiendas-bg-color);
       background-color: white;
-      color: var(--grey-tiendas-bg-color)
+      border-style: solid;
+      border-color: var(--guinda-bg-color);
+      cursor: pointer;
     }
+
+    .cardImage{
+      width: 100%;
+      height: auto;
+    }
+
+    /*.catalog-content{
+      padding-left: 15px; 
+      height: 75vh; 
+      overflow-y: scroll;
+    }*/
+
+    .encabezadoCategoria{
+      float:left; 
+      width:30%;
+      margin-left: 1px;
+      text-align: center;
+    }
+
+    .encabezado{
+      background-color: var(--grey-tiendas-bg-color);
+      color: white;
+      font-size: 18 px;
+      padding: 10px;
+      height: 100%;
+
+      border-top-left-radius: 25px; 
+      border-top-right-radius: 25px;
+      padding-left: 25px;
+    }
+
+    .aboutUsBody{
+      padding-top: 20px;
+      font-size: 150%;
+    }
+
+    .product{
+      cursor: pointer;
+      font-size: 25px;
+    }
+
+    .nav-item{
+      font-size: 20px;
+      width: 100%;
+      /*text-align: center;*/
+      cursor: pointer;
+    }
+
+    @media only screen and (max-width: 750px) {
+      /* For mobile phones: */
+      [class="form-inline my-2 my-lg-0"] {
+          width: 100%;
+      }
+    }
+
+    @media only screen and (min-width: 751px) {
+      /* For mobile phones: */
+      [class="form-inline my-2 my-lg-0"] {
+        width: 50%;
+      }
+    }
+
+    @media only screen and (max-width: 750px) {
+      /* For mobile phones: */
+      [class="btn btn-secondary my-2 my-sm-0 btnBuscar"] {
+          width: 100%;
+      }
+    }
+
+    @media only screen and (min-width: 751px) {
+      [class="nav-item"] {
+        text-align: center;
+      }
+    }
+
+    @media only screen and (max-width: 750px) {
+      [class="nav-item"] {
+        text-align: left;
+      }
+    }
+
+    .navbar{
+      background-color: var(--guinda-bg-color);
+    }
+
+    .card-custom{
+      padding: 0.45em;
+      border-radius: 0px;
+      cursor: pointer;
+    }
+
+    /* SCROLL TO TOP */
+    #return-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: rgb(0, 0, 0);
+      background: rgba(0, 0, 0, 0.7);
+      width: 50px;
+      height: 50px;
+      display: block;
+      text-decoration: none;
+      -webkit-border-radius: 35px;
+      -moz-border-radius: 35px;
+      border-radius: 35px;
+      display: none;
+      -webkit-transition: all 0.3s linear;
+      -moz-transition: all 0.3s ease;
+      -ms-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      transition: all 0.3s ease;
+  }
+
+  #return-to-top i {
+      color: #fff;
+      margin: 0;
+      position: relative;
+      left: 16px;
+      top: 13px;
+      font-size: 19px;
+      -webkit-transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      -ms-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      transition: all 0.3s ease;
+  }
+  
+  #return-to-top:hover {
+      background: rgba(0, 0, 0, 0.9);
+  }
+
+  #return-to-top:hover i {
+      color: #fff;
+      top: 5px;
+  }
+  
